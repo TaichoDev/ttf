@@ -1,0 +1,16 @@
+@import "../base";
+
+.section-formation-list {
+  padding: $spacing-l $spacing-xs;
+  @include desktop {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .section-formation-list-title {
+    margin-top: 0;
+    margin-bottom: $spacing-s;
+  }
+}
+
+.section-formation-list-title {
+}

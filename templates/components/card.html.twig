@@ -1,0 +1,14 @@
+<a href="{{ path('formation', { id: formation.id}) }}" class="card">
+    <div class="card-media">
+        <img src="{{ formation.image }}" class="card-media-img responsive" alt="">
+    </div>
+    <div class="card-content">
+        <div class="card-title">{{ formation.title }}</div>
+        {% if formation.company is defined and formation.company is not empty %}
+            <div class="card-subheead">{{ formation.company.name }}</div>
+        {% endif %}
+        {% if formation.description is defined and formation.description is not empty %}
+            <div class="card-text">{{ formation.description }}</div>
+        {% endif %}
+    </div>
+</a>

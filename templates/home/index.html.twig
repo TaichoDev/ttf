@@ -1,0 +1,19 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Trouve ta formation - Liste des formations{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    {{ encore_entry_link_tags('home') }}
+{% endblock %}
+
+{% block body %}
+    <section class="section-formation-list container">
+        <h2 class="section-formation-list-title">Liste des formations</h2>
+        <div class="grid-list">
+            {% for formation in formationList %}
+                {% include 'components/card.html.twig' %}
+            {% endfor %}
+        </div>
+    </section>
+{% endblock %}

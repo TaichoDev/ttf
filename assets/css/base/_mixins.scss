@@ -1,0 +1,23 @@
+// To see behaviour media queries mixins
+// Go to : https://itnext.io/writing-media-queries-with-sass-mixins-3ea591ea3ea4
+@mixin mobile {
+  @media screen and (max-width: $breakpoint-mobile) { @content; }
+}
+@mixin tablet-portrait {
+  @media screen and (min-width: $breakpoint-tablet-portrait) { @content; }
+}
+@mixin tablet-portrait-only {
+  @media screen and (min-width: $breakpoint-tablet-portrait) and (max-width: ($breakpoint-tablet-landscape - 1)) { @content; }
+}
+@mixin tablet-landscape {
+  @media screen and (min-width: $breakpoint-tablet-landscape) { @content; }
+}
+@mixin tablet {
+  @media screen and (min-width: $breakpoint-tablet-landscape) { @content; }
+}
+@mixin desktop {
+  @media screen and (min-width: $breakpoint-desktop) { @content; }
+}
+@mixin big-desktop {
+  @media screen and (min-width: $breakpoint-big-desktop) { @content; }
+}

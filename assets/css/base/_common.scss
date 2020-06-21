@@ -1,0 +1,31 @@
+.container > * {
+  max-width: $body-content-max-width;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.main-content {
+  background-color: $color-white;
+  border-radius: $border-radius-base;
+  padding: $spacing-l;
+  box-shadow: $box-shadow-base;
+}
+
+img.responsive {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.grid-list {
+  display: grid;
+  grid-gap: $spacing-m;
+  grid-template-columns: repeat(1, 1fr);
+
+  @include tablet-portrait {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @include tablet-landscape {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

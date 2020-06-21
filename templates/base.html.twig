@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}Trouve ta formation{% endblock %}</title>
+        {% block stylesheets %}
+            {{ encore_entry_link_tags('app') }}
+            <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+        {% endblock %}
+    </head>
+    <body>
+        {% block header %}{% include 'header.html.twig' %}{% endblock %}
+        <main id="main-container">
+            {% block body %}{% endblock %}
+        </main>
+        {% block javascripts %}
+            {{ encore_entry_script_tags('app') }}
+        {% endblock %}
+        {% block footer %}{% include 'footer.html.twig' %}{% endblock %}
+    </body>
+</html>
